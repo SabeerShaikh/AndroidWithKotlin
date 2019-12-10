@@ -117,15 +117,11 @@ class AssignmentFragment : Fragment(), MainView, SwipeRefreshLayout.OnRefreshLis
 
         //create thread for fetching recodes from database
         //Fetching all recodes from database.
-        /*var linearLayoutManager = LinearLayoutManager(
-            listener, RecyclerView.VERTICAL, false
-        )
-        mRecyclerView.layoutManager=linearLayoutManager
-       */ model.allAssignmentData.observe(listener!!, Observer { assignmentModel ->
+         model.allAssignmentData.observe(listener!!, Observer { assignmentModel ->
             // Data bind the recycler view
             mRecyclerView!!.adapter = AssignmentKotlinAdapter(assignmentModel)
         })
-//        setRecyclerViewCache()
+
         if (savedRecyclerLayoutState != null) {
             Objects.requireNonNull<RecyclerView.LayoutManager>(recycler_view!!.layoutManager)
                 .onRestoreInstanceState(savedRecyclerLayoutState)
