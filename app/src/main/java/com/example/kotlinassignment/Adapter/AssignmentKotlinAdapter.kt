@@ -32,6 +32,8 @@ class AssignmentKotlinAdapter(val assignmentModel: List<AssignmentModel>) :
         Picasso.get()
             .load(assignmentModel[position].imageHref)
             .fit()
+            .placeholder(R.drawable.ic_launcher)
+            .priority(Picasso.Priority.HIGH)
             .error(R.drawable.ic_launcher)
             .into(holder.imageHref, object : com.squareup.picasso.Callback {
                 override fun onSuccess() {
