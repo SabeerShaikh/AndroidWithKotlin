@@ -32,6 +32,7 @@ class AssignmentKotlinAdapter(val assignmentModel: List<AssignmentModel>) :
         Picasso.get()
             .load(assignmentModel[position].imageHref)
             .fit()
+            .error(R.drawable.ic_launcher)
             .into(holder.imageHref, object : com.squareup.picasso.Callback {
                 override fun onSuccess() {
                     //Success image already loaded into the view
@@ -39,7 +40,8 @@ class AssignmentKotlinAdapter(val assignmentModel: List<AssignmentModel>) :
 
                 override fun onError(e: Exception) {
                     //Error placeholder image already loaded into the view, do further handling of this situation here
-                    holder.imageHref.setImageResource(R.drawable.ic_launcher)
+                   // holder.imageHref.setImageResource(R.drawable.ic_launcher)
+
                 }
 
 

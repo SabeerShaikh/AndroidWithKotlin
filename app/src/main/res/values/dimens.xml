@@ -10,4 +10,5 @@
     <dimen name="start_padding">16dp</dimen>
     <dimen name="end_padding">16dp</dimen>
     <dimen name="top_padding">16dp</dimen>
+    <dimen name="elevation_padding">4dp</dimen>
 </resources>

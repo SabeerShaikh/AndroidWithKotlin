@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
 
     android:orientation="vertical">
 
@@ -9,7 +10,9 @@
         android:id="@+id/card_view"
         android:layout_width="match_parent"
         android:layout_height="150dp"
+        app:cardElevation="@dimen/elevation_padding"
         android:layout_marginTop="@dimen/card_start_padding"
+        android:layout_marginBottom="@dimen/card_bottom_padding"
         android:layout_gravity="center">
 
         <LinearLayout
